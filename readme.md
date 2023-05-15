@@ -1,23 +1,25 @@
-This code monitors CPU and memory power utilization using Intel's Runtime Average Power Limiting ("RAPL") technology.
+This code monitors CPU and memory power utilization using Intel's Running Average Power Limiting ("RAPL") technology.
 
 More details on Intel RAPL: https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3b-part-2-manual.pdf
 
 See section 14.9 "Platform Specific Power Management Support"
 
 Prereq:
+
   ```sudo apt-get install msr-tools``` (or equivalent)
   
   ```sudo modprobe msr```
 
+Compiling:
 1. Set the number of CPUs in rapl.h
-2. Compiling: ```gcc rapl.c -o rapl.o```
+2. ```gcc rapl.c -o rapl.o```
 
 ---------------------------------------------------
-Standalone usage: ```sudo ./rapl.o```
+Standalone usage: 
+
+```sudo ./rapl.o```
 
 Sample Output:
-
-```$ sudo ./rapl.o ```
 
 ```
 sudo ./rapl.o
