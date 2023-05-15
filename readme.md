@@ -20,7 +20,7 @@ Sample Output:
 ```$ sudo ./rapl.o ```
 
 ```
- sudo ./rapl.o
+sudo ./rapl.o
 
 Using 96 CPUs
 
