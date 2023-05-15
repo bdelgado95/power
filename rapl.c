@@ -17,7 +17,8 @@ int main(int argc, char **argv)
   uint32_t dramPowerBucket = 0;
   uint32_t i = 0;
   uint32_t detected_cpus = sysconf(_SC_NPROCESSORS_ONLN);
-   
+  uint32_t duration=3;
+  
   if (detected_cpus != NUM_CPUS) {
     printf("\nCurrently set to use %u CPUs, configure NUM_CPUS in rapl.h for your system.\n", NUM_CPUS);
   } else {
@@ -33,10 +34,7 @@ int main(int argc, char **argv)
     Take two RAPL samples 
   */
   getPower(NUM_CPUS, power_array_before);
-  if (sleep==1) {
-    printf("\nSleeping...\n");
-    sleep(duration);
-  }
+  sleep(duration);
   getPower(NUM_CPUS, power_array_after);
 
   computePowerDiff((uint32_t)NUM_CPUS, power_array_before, power_array_after, power_diff, &powerSummary, NOPRINT);
