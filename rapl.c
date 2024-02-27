@@ -42,7 +42,7 @@ int main(int argc, char **argv)
   dramPowerBucket = assignDRAMowerBucket(powerSummary.dram_energy);
 
   for (i=0; i < NUM_CPUS; i++) {
-    printf("\nCPU %u: (POWER, DRAM) energy: %lu %lu", i, power_diff[i].cpu_energy, power_diff[i].dram_energy);
+    printf("\nCPU %u: (CPU, DRAM) energy: %lu %lu", i, power_diff[i].cpu_energy, power_diff[i].dram_energy);
   }
   printf("\n\n\nCPU PWR %lu. DRAM PWR %lu\n\n", powerSummary.cpu_energy, powerSummary.dram_energy);
   return 0;
